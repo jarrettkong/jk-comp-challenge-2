@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Open Sans';
+  font-weight: 800;
+}
+
+.wrapper {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: 15% 85%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 12px;
+  background-color: #354052;
+  color: #909bad;
+}
+
+.nav-section {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid #2E3548;
+  padding: 20px;
+}
+
+.nav-title {
+  font-size: 11px;
+  text-transform: none;
+  margin: 0;
+}
+
+.nav-categories, .nav-user {
+  text-transform: none;
+}
+
+.nav-user {
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:visited {
+  color: inherit;
+}
+
+.material-icons {
+  margin-right: 5px;
+}
+
+main {
+  border: 1px solid green;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
