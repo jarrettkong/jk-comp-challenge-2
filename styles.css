@@ -13,7 +13,7 @@ body {
 }
 
 .wrapper {
-  border: 1px solid red;
+  border: 1px solid grey;
   display: grid;
   grid-template-columns: 15% 85%;
 }
@@ -115,13 +115,13 @@ main {
   display: grid;
   grid-template-columns: repeat(14, 1fr);
   grid-auto-rows: auto;
+  list-style: none;
 }
 
 .search-bar .material-icons {
   padding: 0;
   margin: 0;
   font-size: 25px;
-  color: grey;
 }
 
 .search-bar input {
@@ -141,9 +141,7 @@ input:focus {
 .search-bar li {
   border-left: 1px solid #F5F5F5;
   border-right: 1px solid #F5F5F5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .search-bar li:nth-child(2) {
@@ -155,7 +153,7 @@ input:focus {
   border-right: 0;
 }
 
-.search-bar li:hover {
+.search-bar a:hover {
   background-color: #15A4FA;
   border: 1px solid #15A4FA;
   color: white;
@@ -165,16 +163,101 @@ input:focus {
   border: 0;
 }
 
-
+.search-bar a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 70px;
+  color: grey;
+  text-decoration: none;
+}
 
 .info {
   height: 150px;
-  border-bottom: 1px solid #f5f5f5;
+  padding-left: 40px;
+  display: flex;
 }
 
 h1 {
   font-weight: 500;
-  font-stretch: semi-condensed;
+  font-size: 25px;
+  margin: 40px 0 0 0;
+  color: #404040;
+}
+
+.location-container {
+  flex: 2;
+}
+
+.job-location {
+  color: grey;
+  font-weight: 600;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.job-location i {
+  margin: 0 5px 0 0;
+  font-size: 20px;
+}
+
+.job-location a  {
+  color: #15A4FA;
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  height: 40px;
+  line-height: 30px;
+  grid-column-gap: 15px;
+  margin: 60px 20px 0 0;
+  flex: 1;
+}
+
+.button-container .material-icons {
+  margin: 0;
+  font-size: 20px;
+}
+
+.button-container button {
+  height: 40px;
+  color: grey;
+  width: 40px;
+  border-style: none;
+  background-color: white;
+  border-radius: 100%;
+  border: 1px solid grey;
+}
+
+.button-container button:hover {
+  color: white;
+  background-color: #15A4FA;
+}
+
+#open-button {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  width: auto;
+  border-radius: 100px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+#open-button i {
+  color: green;
+}
+
+.job-post-nav {
+  border-bottom: 1px solid red;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  list-style: none;
 }
 
 #charts {
