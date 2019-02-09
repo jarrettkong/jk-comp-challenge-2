@@ -14,6 +14,8 @@
   </styles>
   <!-- Open Sans -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
   <title>Static Comp 2</title>
 </head>
 
@@ -86,8 +88,29 @@
           <li class="tab"><a href="">Notifications</a></li>
         </ul>
       <section class="job-post-content">
-        <article id="charts">
-        </article>
+        <section id="chart-area">
+          <div class="donut-container">
+            <div class="donut-chart">
+              <canvas id="ctx1" height=150></canvas>
+              <p class='donut-title'><span>3,154</span><br>APPLICANTS</p>
+            </div>
+            <div class="donut-chart">
+              <canvas id="ctx2" height=150></canvas>
+              <p class='donut-title'><span>1,546</span><br>INTERVIEWS</p>
+            </div>
+            <div class="donut-chart">
+              <canvas id="ctx3" height=150></canvas>
+              <p class='donut-title'><span>912</span><br>FORWARDS</p>
+            </div>
+            <p id="donut-label">TOTALS - Out of 5,231 views</p>
+          </div>
+          <div class="bar-container">
+            <div class="bar-chart">
+              <canvas id="ctxBar" height=125></canvas>
+            </div>
+            <p id="bar-label">APPLICANTS/DAY</p>
+          </div>
+        </section>
         <button class="minimize"><i class="material-icons">arrow_drop_up</i></button>
         <section class="content-wrapper">
           <table id="job-description" cellspacing="0">
@@ -124,7 +147,7 @@
               <td class="job-description-title">Hiring Lead</td>
               <td class="job-description-content"><img src="" alt="" class="headshot">Tom Tizzy</td>
             </tr>
-            <tr>
+            <tr class="last-row">
               <td class="job-description-title">Approved Salary</td>
               <td class="job-description-content">$58,000</td>
             </tr>
@@ -162,7 +185,7 @@
       </section>
     </div>
   </div>
-
+  <script src="script.js"></script>
 </body>
 
 </html>
