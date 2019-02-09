@@ -3,7 +3,7 @@
 *::after {
   box-sizing: border-box;
 }
- 
+
 html,
 body {
   max-width: 1200px;
@@ -149,7 +149,7 @@ input:focus {
   text-align: center;
 }
 
-.search-bar li:hover {
+.search-bar a:hover {
   background-color: #15A4FA;
   border: 1px solid #15A4FA;
   color: white;
