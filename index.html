@@ -57,7 +57,7 @@
     <div class="temp">
       <header>
         <ul class="search-bar">
-          <li><a href=""><i class="material-icons">arrow_left menu</i></a></li>
+          <li><a href=""><i class="material-icons">menu</i></a></li>
           <li><input type="text" placeholder='<i class="material-icons">search</i>Search for a job, task, or resume'></a></li>
           <li><a href=""><i class="material-icons">person_add</i></a></li>
           <li><a href=""><i class="material-icons"></i></a></li>
@@ -77,23 +77,23 @@
           </div>
         </section>
         <ul class="job-post-nav">
-          <li class="tab">Summary</li>
-          <li class="tab">Applicants</li>
-          <li class="tab">Job Board</li>
-          <li class="tab">Interviews</li>
-          <li class="tab">Activity</li>
-          <li class="tab">Broadcast</li>
-          <li class="tab">Notifications</li>
+          <li class="tab"><a href="" id="tab-selected">Summary</a></li>
+          <li class="tab"><a href="">Applicants</a></li>
+          <li class="tab"><a href="">Job Board</a></li>
+          <li class="tab"><a href="">Interviews</a></li>
+          <li class="tab"><a href="">Activity</a></li>
+          <li class="tab"><a href="">Broadcast</a></li>
+          <li class="tab"><a href="">Notifications</a></li>
         </ul>
       <section class="job-post-content">
         <article id="charts">
         </article>
-        <button class="minimize">[Close Arrow]</button>
+        <button class="minimize"><i class="material-icons">arrow_drop_up</i></button>
         <section class="content-wrapper">
-          <table id="job-description">
+          <table id="job-description" cellspacing="0">
             <tr>
               <th class="job-description-title">Job Description</th>
-              <th class="job-description-content"><button>[pencil]Edit</button></th>
+              <th class="job-description-content"><button><i class="material-icons">build</i>Edit</button></th>
             </tr>
             <tr>
               <td class="job-description-title">Position Title</td>
@@ -122,39 +122,42 @@
             </tr>
             <tr>
               <td class="job-description-title">Hiring Lead</td>
-              <td class="job-description-content"><img src="" alt="" class="headshot"> Tom Tizzy</td>
+              <td class="job-description-content"><img src="" alt="" class="headshot">Tom Tizzy</td>
             </tr>
             <tr>
               <td class="job-description-title">Approved Salary</td>
               <td class="job-description-content">$58,000</td>
             </tr>
           </table>
-        </section>
-        <section id="social">
-          <button class="share-button">[FB]Post to Facebook</button>
-          <button class="share-button">[Twitter]Tweet this Job</button>
-          <button class="share-button">[In]Post to LinkedIn</button>
-          <div class="input-container">
-            <h3>[Globe]Link to this Job</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam repellendus, expedita? Nam, modi. Quo!</p>
-            <input type="url" value='https://www.example.com/posting'>
-            <button class="copy">Copy</button>
-            <!-- <hr> -->
-          </div>
-          <div class="input-container">
-            <h3>[Camera]Use the Button Widget</h3>
-            <p>this widget embeds the buttons for sharing the job for submitting a resume on your website.</p>
-            <input type="text" value='<script type="text/javascript" s...'>
-            <button class="copy">Copy</button>
-            <!-- <hr> -->
-          </div>
-          <div class="input-container">
-            <h3>[Paper plane]Upload Resumes by Email</h3>
-            <p>You can automatically upload multiple resumes to this job by emailing the address below</p>
-            <input type="email" value="tomtizzy@gmail.com">
-            <button class="copy">Copy</button>
-            <!-- <hr> -->
-          </div>
+          <section id="social">
+            <button class="share-button facebook"><img src='images/facebook.svg'alt="">Post to Facebook</button>
+            <button class="share-button twitter"><img src='images/twitter.svg'alt="">Tweet this Job</button>
+            <button class="share-button linkedin"><img src='images/linkedin.svg'alt="">Post to LinkedIn</button>
+            <div class="input-container">
+              <h3><i class="material-icons">public</i>Link to this Job</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam repellendus</p>
+              <form>
+                <input type="url" placeholder='https://www.example.com/posting'>
+                <button class="copy">Copy</button>
+              </form>
+            </div>
+            <div class="input-container">
+              <h3><i class="material-icons">camera_alt</i>Use the Button Widget</h3>
+              <p>This widget embeds the buttons for sharing the job for submitting a resume on your website.</p>
+              <form>
+                <input type="text" placeholder='<script type="text/javascript" s...'>
+                <button class="copy">Copy</button>
+              </form>
+            </div>
+            <div class="input-container last">
+              <h3><i class="material-icons">send</i>Upload Resumes by Email</h3>
+              <p>You can automatically upload multiple resumes to this job by emailing the address below</p>
+              <form>
+                <input type="email" placeholder="tomtizzy@gmail.com">
+              </form>
+              <!-- <hr> -->
+            </div>
+          </section>
         </section>
       </section>
     </div>
