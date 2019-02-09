@@ -72,7 +72,7 @@ nav ul {
   justify-content: center;
   align-items: center;
   border-top: 0;
-  padding-top: 30px;
+  padding-top: 35px;
 }
 
 .nav-user .material-icons {
@@ -162,6 +162,7 @@ input:focus {
 .search-bar li:nth-child(2) {
   grid-column-start: 2;
   grid-column-end: 12;
+  border-bottom: 1px solid #F5F5F5;
 }
 
 .search-bar li:nth-child(2):hover {
@@ -185,12 +186,13 @@ input:focus {
   height: 140px;
   padding-left: 40px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 h1 {
   font-weight: 500;
   font-size: 25px;
-  margin: 40px 0 0 0;
   color: #404040;
 }
 
@@ -215,6 +217,10 @@ h1 {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 button:focus {
   outline: none;
 }
@@ -225,7 +231,7 @@ button:focus {
   height: 40px;
   line-height: 30px;
   grid-column-gap: 15px;
-  margin: 50px 40px 0 0;
+  margin-right: 40px;
   flex: 1;
 }
 
@@ -293,11 +299,76 @@ button:focus {
   height: 100%;
 }
 
-#charts {
-  height: 325px;
+#chart-area {
+  height: 350px;
+  width: 100%;
   border-top: 1px solid lightgrey;
   border-bottom: 1px solid lightgrey;
   margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#ctx1, #ctx2, #ctx3 {
+  width: 100%;
+  height: 100%;
+}
+
+.donut-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  flex: 4;
+  margin-left: -10px;
+  position: relative;
+}
+
+.donut-chart {
+  padding: 50px 0 100px 0;
+  position: relative;
+}
+
+.donut-title {
+  position: absolute;
+  margin: 0;
+  top: 32%;
+  text-align: center;
+  width: 100%;
+  color: grey;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.donut-title span {
+  font-size: 30px;
+  font-weight: 600;
+  color: #404040;
+}
+
+#donut-label, #bar-label {
+  position: absolute;
+  border: 1px solid lightgrey;
+  border-radius: 100px;
+  padding: 10px 20px;
+  background-color: white;
+  font-weight: 600;
+  bottom: 5%;
+  left: 30%;
+  margin: auto;
+  font-size: 13px;
+}
+
+#bar-label {
+  left: 35%;
+}
+
+.bar-container {
+  flex: 3;
+  position: relative;
+}
+
+.bar-chart {
+  padding: 58px 0 68px 0;
 }
 
 .minimize {
@@ -338,6 +409,7 @@ th:first-child {
 }
 
 th button {
+  width: 80px;
   height: 30px;
   color: white;
   background-color: #7C8BA6;
@@ -390,6 +462,7 @@ tr:nth-child(7) td:nth-child(2) {
   border-radius: 3px;
   margin-bottom: 15px;
   position: relative;
+  border-style: none;
 }
 
 .share-button img {
@@ -397,6 +470,10 @@ tr:nth-child(7) td:nth-child(2) {
   filter: invert(100%);
   position: absolute;
   display: block;
+}
+
+.share-button:nth-child(3) {
+  margin-bottom: 0;
 }
 
 .facebook {
@@ -417,8 +494,8 @@ tr:nth-child(7) td:nth-child(2) {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 5px 0 25px 0;
   border-bottom: 1px solid grey;
+  padding-bottom: 20px;
 }
 
 .input-container .material-icons {
@@ -448,7 +525,6 @@ h3 {
 .input-container input {
   width: 80%;
   padding-left: 10px;
-  /* margin-top: 15px; */
 }
 
 .input-container input::placeholder {
@@ -469,8 +545,8 @@ form {
 }
 
 .last {
-  padding-bottom: 0;
   border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .last input {
