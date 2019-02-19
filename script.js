@@ -15,13 +15,3 @@ for(var i = 0; i < links.length; i++) {
     e.preventDefault();
   }, true);
 }
-
-menu.addEventListener('click', function(e) {
-  if(nav.style.display === 'none') {
-    wrapper.style.display = 'grid';
-    nav.style.display = 'block';
-  } else {
-    nav.style.display = 'none';
-    wrapper.style.display = 'block';
-  }
-});
