@@ -109,6 +109,22 @@ nav a:visited {
   margin: -2px 0 0 5px;
 }
 
+.yellow-box {
+  color: yellow;
+}
+
+.blue-box {
+  color: #2AAFFF;
+}
+
+.red-box {
+  color: #E91A62;
+}
+
+.green-box {
+  color: #00A989;
+}
+
 main {
   display: grid;
 }
@@ -133,7 +149,7 @@ main {
   height: 100%;
   border-style: none;
   width: 100%;
-  padding-left: 30px;
+  padding-left: 50px;
   height: 100%;
   font-size: 13px;
   color: grey;
@@ -163,6 +179,13 @@ input:focus {
   grid-column-start: 2;
   grid-column-end: 12;
   border-bottom: 1px solid #F5F5F5;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 40%;
+  left: 15px;
 }
 
 .search-bar li:nth-child(2):hover {
@@ -197,7 +220,7 @@ h1 {
 }
 
 .location-container {
-  flex: 2;
+  flex: 5;
 }
 
 .job-location {
@@ -226,13 +249,14 @@ button:focus {
 }
 
 .button-container {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: flex;
+  flex-direction: row;
+  /* grid-template-columns: repeat(6, 1fr); */
   height: 40px;
   line-height: 30px;
   grid-column-gap: 15px;
-  margin-right: 40px;
-  flex: 1;
+  width: auto;
+  flex: 2;
 }
 
 .button-container .material-icons {
@@ -247,6 +271,7 @@ button:focus {
   border-style: none;
   background-color: white;
   border-radius: 100%;
+  margin-right: 15px;
   border: 1px solid grey;
 }
 
@@ -262,6 +287,7 @@ button:focus {
   border-radius: 100px;
   font-weight: 800;
   text-transform: uppercase;
+  width: 100px;
 }
 
 #open-button i {
@@ -276,6 +302,8 @@ button:focus {
   grid-column-gap: 40px;
   justify-items: center;
   list-style: none;
+  overflow: hidden;
+  overflow-x: auto;
 }
 
 .tab a {
@@ -303,8 +331,8 @@ button:focus {
   height: 350px;
   width: 100%;
   border-top: 1px solid lightgrey;
-  border-bottom: 1px solid lightgrey;
   margin: auto;
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -371,19 +399,39 @@ button:focus {
   padding: 58px 0 68px 0;
 }
 
+.minimize-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .minimize {
   text-align: center;
+  /* position: absolute; */
+  margin: 0 15px;
+  bottom: 0;
+  left: 50%;
+}
+
+.lines {
+  border-bottom: 1px solid lightgrey;
+  height: 1px;
+  text-align: center;
+  width: 100%;
+  text-align: center;
+  position: relative;
 }
 
 .minimize .material-icons {
   font-size: 25px;
 }
 
-.content-wrapper {
+.description-area {
   display: grid;
   height: auto;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 45px;
+  margin-top: 20px;
 }
 
 #job-description {
@@ -469,6 +517,8 @@ tr:nth-child(7) td:nth-child(2) {
   height: 20px;
   filter: invert(100%);
   position: absolute;
+  left: 5%;
+  bottom: 25%;
   display: block;
 }
 
@@ -551,4 +601,99 @@ form {
 
 .last input {
   width: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  #chart-area {
+    flex-direction: column;
+    height: auto;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .wrapper {
+    display: block;
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 850px) {
+
+  .search-bar {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .search-bar li:nth-child(2) {
+    grid-column-end: 6;
+  }
+
+  .description-area {
+    display: block;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #job-description {
+    margin-bottom: 20px;
+  }
+
+  #job-description td,
+  #job-description th {
+    padding: 10px 20px;
+  }
+
+}
+
+@media only screen and (max-width: 550px) {
+
+  .info {
+    display: block;
+    padding-left: 25px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .button-container button {
+    margin-right: 15px;
+  }
+
+  .donut-container {
+    display: block;
+    /* width: 100%; */
+    padding-bottom: 130px;
+  }
+
+  .bar-container {
+    width: 100%;
+  }
+
+  .donut-chart {
+    padding-bottom: 0px;
+  }
+
+  .donut-title {
+    top: 50%;
+  }
+
+  #donut-label {
+    left: 15%;
+  }
+
+  #bar-label {
+    left: 25%;
+  }
+
+  .job-post-content {
+    padding: 0 10px 20px 10px;
+  }
+
 }
