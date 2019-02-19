@@ -6,18 +6,22 @@
 
 html,
 body {
+  max-width: 1200px;
+  margin: auto;
   font-family: 'Open Sans';
   font-weight: 800;
-  margin: auto;
-  max-width: 1200px;
 }
 
+/* Overriding default Material.io styles */
+
 .material-icons {
-  display: inline-flex;
   font-size: 17px;
-  margin-top: -3px;
+  display: inline-flex;
   vertical-align: middle;
+  margin-top: -3px;
 }
+
+/* Max width wrapper */
 
 .wrapper {
   border: 1px solid grey;
@@ -25,30 +29,33 @@ body {
   grid-template-columns: 15% 85%;
 }
 
+/* Left nav menu */
+
 nav {
-  background-color: #354052;
-  color: #909bad;
   display: flex;
   flex-direction: column;
-  font-size: 11px;
   text-transform: uppercase;
+  font-size: 11px;
+  background-color: #354052;
+  color: #909bad;
 }
 
 .nav-section {
-  border-top: 2px solid #2E3548;
   display: flex;
   flex-direction: column;
+  border-top: 2px solid #2E3548;
   padding: 20px 0;
 }
 
 nav ul {
   list-style: none;
-  margin-bottom: 0;
   padding: 0;
+  margin-bottom: 0;
 }
 
 .nav-section li {
   height: 40px;
+  /* border: 1px solid yellow; */
 }
 
 .nav-section .material-icons {
@@ -56,10 +63,10 @@ nav ul {
 }
 
 .nav-title {
-  color: #6F7E95;
+  text-transform: none;
   margin-bottom: 0;
   padding-left: 20px;
-  text-transform: none;
+  color: #6F7E95;
 }
 
 .nav-categories, .nav-user {
@@ -67,10 +74,10 @@ nav ul {
 }
 
 .nav-user {
-  align-items: center;
-  border-top: 0;
   display: flex;
   justify-content: center;
+  align-items: center;
+  border-top: 0;
   padding-top: 35px;
 }
 
@@ -83,8 +90,8 @@ nav ul {
 }
 
 .headshot {
-  border-radius: 100%;
   width: 70px;
+  border-radius: 100%;
 }
 
 .nav-selected, nav li:hover {
@@ -93,9 +100,9 @@ nav ul {
 }
 
 nav a {
+  text-decoration: none;
   display: block;
   line-height: 40px;
-  text-decoration: none;
   vertical-align: top;
 }
 
@@ -123,20 +130,24 @@ nav a:visited {
   color: #00A989;
 }
 
+/* Main right column */
+
 main {
   display: grid;
 }
 
+/* Top bar */
+
 .search-bar {
-  border-bottom: 1px solid #F5F5F5;
-  display: grid;
-  grid-auto-rows: auto;
-  grid-template-columns: repeat(14, 1fr);
-  height: 70px;
-  list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  height: 70px;
+  border-bottom: 1px solid #F5F5F5;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  grid-auto-rows: auto;
+  list-style: none;
 }
 
 .search-bar .material-icons {
@@ -144,13 +155,13 @@ main {
 }
 
 .search-bar input {
+  height: 100%;
   border-style: none;
-  color: grey;
-  font-size: 13px;
-  height: 100%;
-  height: 100%;
-  padding-left: 50px;
   width: 100%;
+  padding-left: 50px;
+  height: 100%;
+  font-size: 13px;
+  color: grey;
 }
 
 input:focus {
@@ -174,16 +185,16 @@ input:focus {
 }
 
 .search-bar li:nth-child(2) {
-  border-bottom: 1px solid #F5F5F5;
-  grid-column-end: 12;
   grid-column-start: 2;
+  grid-column-end: 12;
+  border-bottom: 1px solid #F5F5F5;
   position: relative;
 }
 
 .search-icon {
-  left: 15px;
   position: absolute;
   top: 40%;
+  left: 15px;
 }
 
 .search-bar li:nth-child(2):hover {
@@ -195,26 +206,28 @@ input:focus {
 }
 
 .search-bar a {
-  color: grey;
   display: block;
+  width: 100%;
   height: 100%;
   line-height: 70px;
+  color: grey;
   text-decoration: none;
-  width: 100%;
 }
 
+/* Job info */
+
 .info {
-  align-items: center;
-  display: flex;
   height: 140px;
-  justify-content: space-between;
   padding-left: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 h1 {
-  color: #404040;
-  font-size: 25px;
   font-weight: 500;
+  font-size: 25px;
+  color: #404040;
 }
 
 .location-container {
@@ -223,14 +236,14 @@ h1 {
 
 .job-location {
   color: grey;
-  font-size: 15px;
   font-weight: 600;
+  font-size: 15px;
   margin-top: 10px;
 }
 
 .job-location i {
-  font-size: 20px;
   margin: 0 5px 0 0;
+  font-size: 20px;
 }
 
 .job-location a {
@@ -246,14 +259,17 @@ button:focus {
   outline: none;
 }
 
+/* Open button */
+
 .button-container {
   display: flex;
   flex-direction: row;
-  flex: 2;
-  grid-column-gap: 15px;
+  /* grid-template-columns: repeat(6, 1fr); */
   height: 40px;
   line-height: 30px;
+  grid-column-gap: 15px;
   width: auto;
+  flex: 2;
 }
 
 .button-container .material-icons {
@@ -262,26 +278,27 @@ button:focus {
 
 .button-container button,
 .minimize {
+  height: 40px;
+  color: grey;
+  width: 40px;
+  border-style: none;
   background-color: white;
   border-radius: 100%;
-  border-style: none;
-  border: 1px solid grey;
-  color: grey;
-  height: 40px;
   margin-right: 15px;
-  width: 40px;
+  border: 1px solid grey;
 }
 
 .button-container button:hover {
-  background-color: #15A4FA;
   color: white;
+  background-color: #15A4FA;
 }
 
 #open-button {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  width: 90px;
   border-radius: 100px;
   font-weight: 800;
-  grid-column-end: 4;
-  grid-column-start: 2;
   text-transform: uppercase;
   width: 100px;
 }
@@ -290,25 +307,27 @@ button:focus {
   color: limegreen;
 }
 
+/* Tab menu */
+
 .job-post-nav {
-  display: grid;
-  grid-column-gap: 40px;
-  grid-template-columns: repeat(8, 1fr);
+  margin: 0;
   height: 40px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-column-gap: 40px;
   justify-items: center;
   list-style: none;
-  margin: 0;
-  overflow-x: auto;
   overflow: hidden;
+  overflow-x: auto;
 }
 
 .tab a {
-  color: #6E7E95;
-  display: block;
-  font-size: 14px;
-  height: 100%;
   text-decoration: none;
   text-transform: uppercase;
+  font-size: 14px;
+  color: #6E7E95;
+  display: block;
+  height: 100%;
 }
 
 .tab a:hover,
@@ -318,31 +337,33 @@ button:focus {
 }
 
 .job-post-content {
+  padding: 0 40px 50px 40px;
   background-color: #EDF2F6;
   height: 100%;
-  padding: 0 40px 50px 40px;
 }
 
+/* Graph.js area */
+
 #chart-area {
-  align-items: center;
-  border-top: 1px solid lightgrey;
-  display: flex;
-  flex-direction: row;
   height: 350px;
+  width: 100%;
+  border-top: 1px solid lightgrey;
   margin: auto;
   position: relative;
-  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 #ctx1, #ctx2, #ctx3 {
-  height: 100%;
   width: 100%;
+  height: 100%;
 }
 
 .donut-container {
   display: grid;
-  flex: 4;
   grid-template-columns: repeat(3, 1fr);
+  flex: 4;
   margin-left: -10px;
   position: relative;
 }
@@ -353,33 +374,33 @@ button:focus {
 }
 
 .donut-title {
+  position: absolute;
+  margin: 0;
+  top: 32%;
+  text-align: center;
+  width: 100%;
   color: grey;
   font-size: 13px;
   font-weight: 600;
-  margin: 0;
-  position: absolute;
-  text-align: center;
-  top: 32%;
-  width: 100%;
 }
 
 .donut-title span {
-  color: #404040;
   font-size: 30px;
   font-weight: 600;
+  color: #404040;
 }
 
 #donut-label, #bar-label {
-  background-color: white;
-  border-radius: 100px;
+  position: absolute;
   border: 1px solid lightgrey;
-  bottom: 5%;
-  font-size: 13px;
+  border-radius: 100px;
+  padding: 10px 20px;
+  background-color: white;
   font-weight: 600;
+  bottom: 5%;
   left: 30%;
   margin: auto;
-  padding: 10px 20px;
-  position: absolute;
+  font-size: 13px;
 }
 
 #bar-label {
@@ -395,45 +416,51 @@ button:focus {
   padding: 58px 0 68px 0;
 }
 
+/* Minimize arrow under charts */
+
 .minimize-container {
-  align-items: center;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .minimize {
+  text-align: center;
+  /* position: absolute; */
+  margin: 0 15px;
   bottom: 0;
   left: 50%;
-  margin: 0 15px;
-  text-align: center;
 }
 
 .lines {
   border-bottom: 1px solid lightgrey;
   height: 1px;
-  position: relative;
-  text-align: center;
   text-align: center;
   width: 100%;
+  text-align: center;
+  position: relative;
 }
 
 .minimize .material-icons {
   font-size: 25px;
 }
 
+/* Area containing table and social */
+
 .description-area {
   display: grid;
-  grid-column-gap: 45px;
-  grid-template-columns: repeat(3, 1fr);
   height: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 45px;
   margin-top: 20px;
 }
 
 #job-description {
-  grid-column-end: 3;
   grid-column-start: 1;
+  grid-column-end: 3;
   height: 100%;
   text-align: left;
+  /* border: 1px solid red; */
 }
 
 #job-description .material-icons {
@@ -441,8 +468,8 @@ button:focus {
 }
 
 th {
-  background-color: #6E7E95;
   color: white;
+  background-color: #6E7E95;
   text-transform: uppercase;
 }
 
@@ -451,31 +478,33 @@ th:first-child {
 }
 
 th button {
+  width: 80px;
+  height: 30px;
+  color: white;
   background-color: #7C8BA6;
   border-style: none;
-  color: white;
-  font-size: 13px;
-  font-weight: 800;
-  height: 30px;
-  line-height: 30px;
   text-transform: uppercase;
-  width: 80px;
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 30px;
 }
 
 td {
-  background-color: white;
+  min-height: 65px;
+  /* border-bottom: 1px solid red; */
   color: #6E7E95;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.5;
-  min-height: 65px;
+  background-color: white;
+  /* vertical-align: top; */
 }
 
 td:first-child {
-  font-weight: 800;
+  width: 33%;
   padding-left: 30px;
   text-transform: uppercase;
-  width: 33%;
+  font-weight: 800;
 }
 
 tr:nth-child(7) td:first-child {
@@ -487,31 +516,33 @@ tr:nth-child(7) td:nth-child(2) {
   padding-right: 30px;
 }
 
+/* Social sub grid */
+
 #social {
-  display: flex;
-  flex-direction: column;
   grid-column: 3;
   height: 700px;
+  display: flex;
+  flex-direction: column;
 }
 
 .share-button {
-  border-radius: 3px;
-  border-style: none;
-  color: white;
   flex: 1;
-  font-size: 13px;
+  color: white;
   font-weight: 600;
+  font-size: 13px;
+  border-radius: 3px;
   margin-bottom: 15px;
   position: relative;
+  border-style: none;
 }
 
 .share-button img {
+  height: 20px;
+  filter: invert(100%);
+  position: absolute;
+  left: 5%;
   bottom: 25%;
   display: block;
-  filter: invert(100%);
-  height: 20px;
-  left: 5%;
-  position: absolute;
 }
 
 .share-button:nth-child(3) {
@@ -531,12 +562,12 @@ tr:nth-child(7) td:nth-child(2) {
 }
 
 .input-container {
-  border-bottom: 1px solid grey;
+  flex: 4;
   color: #6E7E95;
   display: flex;
   flex-direction: column;
-  flex: 4;
   justify-content: flex-end;
+  border-bottom: 1px solid grey;
   padding-bottom: 20px;
 }
 
@@ -545,8 +576,8 @@ tr:nth-child(7) td:nth-child(2) {
 }
 
 .input-container p {
-  font-size: 13px;
   font-weight: 500;
+  font-size: 13px;
   line-height: 1.5;
   margin: 0;
 }
@@ -557,16 +588,16 @@ h3 {
 
 .input-container input,
 .copy {
-  border-style: none;
-  border: 0;
-  color: grey;
-  font-size: 13px;
   height: 40px;
+  border-style: none;
+  font-size: 13px;
+  color: grey;
+  border: 0;
 }
 
 .input-container input {
-  padding-left: 10px;
   width: 80%;
+  padding-left: 10px;
 }
 
 .input-container input::placeholder {
@@ -574,11 +605,11 @@ h3 {
 }
 
 .copy {
-  background-color: #45BBC3;
-  color: white;
-  margin-left: -5px;
-  padding: 0;
   width: 20%;
+  margin-left: -5px;
+  background-color: #45BBC3;
+  padding: 0;
+  color: white;
 }
 
 form {
@@ -595,7 +626,10 @@ form {
   width: 100%;
 }
 
+/* Media queries */
+
 @media only screen and (max-width: 1200px) {
+
   #chart-area {
     flex-direction: column;
     height: auto;
@@ -609,9 +643,11 @@ form {
     display: block;
     width: 100%;
   }
+
 }
 
 @media only screen and (max-width: 850px) {
+
   .search-bar {
     grid-template-columns: repeat(8, 1fr);
   }
@@ -634,14 +670,16 @@ form {
   #job-description th {
     padding: 10px 20px;
   }
+
 }
 
 @media only screen and (max-width: 550px) {
+
   .info {
     display: block;
+    padding-left: 25px;
     height: auto;
     margin-bottom: 20px;
-    padding-left: 25px;
   }
 
   .button-container {
@@ -655,6 +693,7 @@ form {
 
   .donut-container {
     display: block;
+    /* width: 100%; */
     padding-bottom: 130px;
   }
 
@@ -681,4 +720,5 @@ form {
   .job-post-content {
     padding: 0 10px 20px 10px;
   }
+
 }
