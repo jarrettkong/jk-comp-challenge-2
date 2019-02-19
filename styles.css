@@ -281,9 +281,9 @@ button:focus {
 }
 
 #open-button {
-  /* grid-column-start: 2; */
-  /* grid-column-end: 4; */
-  width: 100px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  width: 90px;
   border-radius: 100px;
   font-weight: 800;
   text-transform: uppercase;
