@@ -49,10 +49,10 @@
       <section class="nav-section nav-categories">
         <p class="nav-title">Categories</p>
         <ul>
-          <li><a href=""><i class="material-icons checkbox">check_box</i>Administrative</a></li>
-          <li><a href=""><i class="material-icons checkbox">check_box_outline_blank</i>Design</a></li>
-          <li><a href=""><i class="material-icons checkbox">check_box_outline_blank</i>Executive</a></li>
-          <li><a href=""><i class="material-icons checkbox">check_box_outline_blank</i>Human Resources</a></li>
+          <li><a href=""><i class="material-icons checkbox yellow-box">check_box</i>Administrative</a></li>
+          <li><a href=""><i class="material-icons checkbox blue-box">check_box_outline_blank</i>Design</a></li>
+          <li><a href=""><i class="material-icons checkbox red-box">check_box_outline_blank</i>Executive</a></li>
+          <li><a href=""><i class="material-icons checkbox green-box">check_box_outline_blank</i>Human Resources</a></li>
         </ul>
       </section>
     </nav>
@@ -60,7 +60,7 @@
       <header>
         <ul class="search-bar">
           <li><a href=""><i class="material-icons">menu</i></a></li>
-          <li><input type="text" placeholder='<i class="material-icons">search</i>Search for a job, task, or resume'></a></li>
+          <li><i class="material-icons search-icon">search</i><input type="text" placeholder='Search'></a></li>
           <li><a href=""><i class="material-icons">person_add</i></a></li>
           <li><a href=""><i class="material-icons">donut_small</i></a></li>
           <li><a href=""><i class="material-icons">apps</i></a></li>
@@ -111,8 +111,12 @@
             <p id="bar-label">APPLICANTS/DAY</p>
           </div>
         </section>
-        <button class="minimize"><i class="material-icons">arrow_drop_up</i></button>
-        <section class="content-wrapper">
+        <div class="minimize-container">
+          <div class="lines"></div>
+          <button class="minimize"><i class="material-icons">arrow_drop_up</i></button>
+          <div class="lines"></div>
+        </div>
+        <section class="description-area">
           <table id="job-description" cellspacing="0">
             <tr>
               <th class="job-description-title">Job Description</th>
